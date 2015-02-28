@@ -14,6 +14,19 @@
 		C7934AB61A9DB19C00201915 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7934AB51A9DB19C00201915 /* Images.xcassets */; };
 		C7934AB91A9DB19C00201915 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7934AB71A9DB19C00201915 /* LaunchScreen.xib */; };
 		C7934AC51A9DB19D00201915 /* SamplerTest2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7934AC41A9DB19D00201915 /* SamplerTest2Tests.m */; };
+		C7934AD01A9DB20900201915 /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7934ACF1A9DB20900201915 /* PlayViewController.m */; };
+		C7934AD31A9DB22500201915 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7934AD21A9DB22500201915 /* EditViewController.m */; };
+		C7934AD61A9DB23500201915 /* RecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7934AD51A9DB23500201915 /* RecViewController.m */; };
+		C7934AD81A9DB2CF00201915 /* samplerButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C7934AD71A9DB2CF00201915 /* samplerButton.png */; };
+		C7934ADD1A9DB2F200201915 /* BJRangeSlider.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C7934ADA1A9DB2F200201915 /* BJRangeSlider.bundle */; };
+		C7934ADE1A9DB2F200201915 /* BJRangeSliderWithProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = C7934ADC1A9DB2F200201915 /* BJRangeSliderWithProgress.m */; };
+		C7934AE31A9EE2FA00201915 /* RecStartButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C7934AE11A9EE2FA00201915 /* RecStartButton.png */; };
+		C7934AE41A9EE2FA00201915 /* RecStopButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C7934AE21A9EE2FA00201915 /* RecStopButton.png */; };
+		C7934B0B1AA0540500201915 /* CDRTranslucentSideBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C7934B061AA0540500201915 /* CDRTranslucentSideBar.m */; };
+		C7934B0C1AA0540500201915 /* background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C7934B081AA0540500201915 /* background1.jpg */; };
+		C7934B0D1AA0540500201915 /* burger.png in Resources */ = {isa = PBXBuildFile; fileRef = C7934B091AA0540500201915 /* burger.png */; };
+		C7934B0E1AA0540500201915 /* burger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7934B0A1AA0540500201915 /* burger@2x.png */; };
+		C7934B401AA12BD100201915 /* PlayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C7934B3F1AA12BD100201915 /* PlayButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +53,24 @@
 		C7934ABE1A9DB19D00201915 /* SamplerTest2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SamplerTest2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7934AC31A9DB19D00201915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7934AC41A9DB19D00201915 /* SamplerTest2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SamplerTest2Tests.m; sourceTree = "<group>"; };
+		C7934ACE1A9DB20900201915 /* PlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayViewController.h; sourceTree = "<group>"; };
+		C7934ACF1A9DB20900201915 /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
+		C7934AD11A9DB22500201915 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		C7934AD21A9DB22500201915 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
+		C7934AD41A9DB23500201915 /* RecViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecViewController.h; sourceTree = "<group>"; };
+		C7934AD51A9DB23500201915 /* RecViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecViewController.m; sourceTree = "<group>"; };
+		C7934AD71A9DB2CF00201915 /* samplerButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = samplerButton.png; sourceTree = "<group>"; };
+		C7934ADA1A9DB2F200201915 /* BJRangeSlider.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BJRangeSlider.bundle; sourceTree = "<group>"; };
+		C7934ADB1A9DB2F200201915 /* BJRangeSliderWithProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJRangeSliderWithProgress.h; sourceTree = "<group>"; };
+		C7934ADC1A9DB2F200201915 /* BJRangeSliderWithProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJRangeSliderWithProgress.m; sourceTree = "<group>"; };
+		C7934AE11A9EE2FA00201915 /* RecStartButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RecStartButton.png; sourceTree = "<group>"; };
+		C7934AE21A9EE2FA00201915 /* RecStopButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RecStopButton.png; sourceTree = "<group>"; };
+		C7934B051AA0540500201915 /* CDRTranslucentSideBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRTranslucentSideBar.h; sourceTree = "<group>"; };
+		C7934B061AA0540500201915 /* CDRTranslucentSideBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDRTranslucentSideBar.m; sourceTree = "<group>"; };
+		C7934B081AA0540500201915 /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
+		C7934B091AA0540500201915 /* burger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burger.png; sourceTree = "<group>"; };
+		C7934B0A1AA0540500201915 /* burger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "burger@2x.png"; sourceTree = "<group>"; };
+		C7934B3F1AA12BD100201915 /* PlayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,12 +112,25 @@
 		C7934AA71A9DB19C00201915 /* SamplerTest2 */ = {
 			isa = PBXGroup;
 			children = (
+				C7934AD91A9DB2F200201915 /* BJRangeSliderWithProgress */,
+				C7934B041AA0540500201915 /* CDRTranslucentSideBar */,
+				C7934B071AA0540500201915 /* Resources */,
+				C7934AD71A9DB2CF00201915 /* samplerButton.png */,
+				C7934AE11A9EE2FA00201915 /* RecStartButton.png */,
+				C7934AE21A9EE2FA00201915 /* RecStopButton.png */,
+				C7934B3F1AA12BD100201915 /* PlayButton.png */,
 				C7934AAC1A9DB19C00201915 /* AppDelegate.h */,
 				C7934AAD1A9DB19C00201915 /* AppDelegate.m */,
 				C7934AAF1A9DB19C00201915 /* ViewController.h */,
 				C7934AB01A9DB19C00201915 /* ViewController.m */,
-				C7934AB21A9DB19C00201915 /* Main.storyboard */,
+				C7934AD41A9DB23500201915 /* RecViewController.h */,
+				C7934AD51A9DB23500201915 /* RecViewController.m */,
+				C7934AD11A9DB22500201915 /* EditViewController.h */,
+				C7934AD21A9DB22500201915 /* EditViewController.m */,
+				C7934ACE1A9DB20900201915 /* PlayViewController.h */,
+				C7934ACF1A9DB20900201915 /* PlayViewController.m */,
 				C7934AB51A9DB19C00201915 /* Images.xcassets */,
+				C7934AB21A9DB19C00201915 /* Main.storyboard */,
 				C7934AB71A9DB19C00201915 /* LaunchScreen.xib */,
 				C7934AA81A9DB19C00201915 /* Supporting Files */,
 			);
@@ -117,6 +161,35 @@
 				C7934AC31A9DB19D00201915 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7934AD91A9DB2F200201915 /* BJRangeSliderWithProgress */ = {
+			isa = PBXGroup;
+			children = (
+				C7934ADA1A9DB2F200201915 /* BJRangeSlider.bundle */,
+				C7934ADB1A9DB2F200201915 /* BJRangeSliderWithProgress.h */,
+				C7934ADC1A9DB2F200201915 /* BJRangeSliderWithProgress.m */,
+			);
+			path = BJRangeSliderWithProgress;
+			sourceTree = "<group>";
+		};
+		C7934B041AA0540500201915 /* CDRTranslucentSideBar */ = {
+			isa = PBXGroup;
+			children = (
+				C7934B051AA0540500201915 /* CDRTranslucentSideBar.h */,
+				C7934B061AA0540500201915 /* CDRTranslucentSideBar.m */,
+			);
+			path = CDRTranslucentSideBar;
+			sourceTree = "<group>";
+		};
+		C7934B071AA0540500201915 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C7934B081AA0540500201915 /* background1.jpg */,
+				C7934B091AA0540500201915 /* burger.png */,
+				C7934B0A1AA0540500201915 /* burger@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +272,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7934ADD1A9DB2F200201915 /* BJRangeSlider.bundle in Resources */,
+				C7934B0E1AA0540500201915 /* burger@2x.png in Resources */,
+				C7934AD81A9DB2CF00201915 /* samplerButton.png in Resources */,
+				C7934B0D1AA0540500201915 /* burger.png in Resources */,
+				C7934B401AA12BD100201915 /* PlayButton.png in Resources */,
 				C7934AB41A9DB19C00201915 /* Main.storyboard in Resources */,
 				C7934AB91A9DB19C00201915 /* LaunchScreen.xib in Resources */,
 				C7934AB61A9DB19C00201915 /* Images.xcassets in Resources */,
+				C7934AE41A9EE2FA00201915 /* RecStopButton.png in Resources */,
+				C7934AE31A9EE2FA00201915 /* RecStartButton.png in Resources */,
+				C7934B0C1AA0540500201915 /* background1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +300,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7934B0B1AA0540500201915 /* CDRTranslucentSideBar.m in Sources */,
+				C7934AD01A9DB20900201915 /* PlayViewController.m in Sources */,
 				C7934AB11A9DB19C00201915 /* ViewController.m in Sources */,
 				C7934AAE1A9DB19C00201915 /* AppDelegate.m in Sources */,
+				C7934AD61A9DB23500201915 /* RecViewController.m in Sources */,
+				C7934ADE1A9DB2F200201915 /* BJRangeSliderWithProgress.m in Sources */,
 				C7934AAB1A9DB19C00201915 /* main.m in Sources */,
+				C7934AD31A9DB22500201915 /* EditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +498,7 @@
 				C7934ACA1A9DB19D00201915 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7934ACB1A9DB19D00201915 /* Build configuration list for PBXNativeTarget "SamplerTest2Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +507,7 @@
 				C7934ACD1A9DB19D00201915 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

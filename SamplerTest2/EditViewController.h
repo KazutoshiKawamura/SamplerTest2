@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EditViewController : UIViewController
+@interface EditViewController : UIViewController{
+    
+}
+
+
+- (IBAction)OnRightSideBarButtonTapped:(id)sender;
 
 @end
