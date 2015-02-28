@@ -12,17 +12,18 @@
 @interface RecViewController : UIViewController <AVAudioRecorderDelegate,AVAudioPlayerDelegate>{
     
     AVAudioRecorder *avRecorder;
-    AVAudioPlayer *avPlayer;
+    AVAudioPlayer *avPlayer[50];
     int dataNumber;
     IBOutlet UILabel *label;
     int buttonCondition;
     IBOutlet UIButton *btn;
+    int playCount;
     
 }
 //@property IBOutlet UIButton *btn;
 - (IBAction)recStartAndStop:(id)sender;
 //- (IBAction)resStop:(id)sender;
-- (IBAction)play:(id)sender;
+//- (IBAction)play:(id)sender;
 -(IBAction)deleteRec:(id)sender;
 -(IBAction)choseData1:(id)sender;
 -(IBAction)choseData2:(id)sender;

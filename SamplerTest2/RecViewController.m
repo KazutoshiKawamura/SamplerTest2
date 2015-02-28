@@ -20,6 +20,7 @@
 
     dataNumber = 0;
     buttonCondition = 0;
+    playCount = 0;
 //    btn = [UIButton buttonWithType:UIButtonTypeCustom];
 //    btn.frame = CGRectMake(0, 0, 150, 150);
     [btn setImage:[UIImage imageNamed:@"RecStartButton.png"] forState:UIControlStateNormal];
@@ -136,11 +137,17 @@
         
         NSURL *recordingURL = [NSURL fileURLWithPath:path];
         
-        avPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:recordingURL error:nil];
-        avPlayer.delegate = self;
-        avPlayer.volume=1.0;
-//        avPlayer.currentTime = 1.323;
-        [avPlayer play];
+        avPlayer[playCount] = [[AVAudioPlayer alloc]initWithContentsOfURL:recordingURL error:nil];
+        avPlayer[playCount].delegate = self;
+        avPlayer[playCount].volume=1.0;
+//        avPlayer[playCount].currentTime = 1.323;
+        [avPlayer[playCount] play];
+        playCount++;
+        if (playCount >= 50) {
+            playCount = 0;
+        }
+        
+        
     }
     
 }
@@ -163,27 +170,27 @@
 //    
 //}
 
-- (IBAction)play:(id)sender {
-    
-    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-    [audioSession setCategory:AVAudioSessionCategoryAmbient error:nil];
-    
-    
-    // 録音ファイルパス
-    NSArray *filePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                             NSUserDomainMask,YES);
-    NSString *documentDir = [filePaths objectAtIndex:0];
-    
-    NSString *prePath = [documentDir stringByAppendingPathComponent:@"rec"];
-    NSString *path = [prePath stringByAppendingFormat:@"%d.caf",dataNumber];
-    
-    NSURL *recordingURL = [NSURL fileURLWithPath:path];
-    
-    avPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:recordingURL error:nil];
-    avPlayer.delegate = self;
-    avPlayer.volume=1.0;
-    [avPlayer play];
-}
+//- (IBAction)play:(id)sender {
+//    
+//    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+//    [audioSession setCategory:AVAudioSessionCategoryAmbient error:nil];
+//    
+//    
+//    // 録音ファイルパス
+//    NSArray *filePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+//                                                             NSUserDomainMask,YES);
+//    NSString *documentDir = [filePaths objectAtIndex:0];
+//    
+//    NSString *prePath = [documentDir stringByAppendingPathComponent:@"rec"];
+//    NSString *path = [prePath stringByAppendingFormat:@"%d.caf",dataNumber];
+//    
+//    NSURL *recordingURL = [NSURL fileURLWithPath:path];
+//    
+//    avPlayer[0] = [[AVAudioPlayer alloc]initWithContentsOfURL:recordingURL error:nil];
+//    avPlayer[0].delegate = self;
+//    avPlayer[0].volume=1.0;
+//    [avPlayer[0] play];
+//}
 
 -(IBAction)deleteRec:(id)sender{
     buttonCondition = 0;
