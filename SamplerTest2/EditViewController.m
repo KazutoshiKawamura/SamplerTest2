@@ -45,7 +45,6 @@
     
     // Set ContentView in SideBar
     [self.sideBar setContentViewInSideBar:tableView];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -229,6 +228,7 @@
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
 }
+
 
 @end
 

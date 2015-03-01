@@ -7,6 +7,7 @@
 //
 
 #import "RecViewController.h"
+#import "EditViewController.h"
 
 @interface RecViewController ()
 
@@ -21,6 +22,9 @@
     dataNumber = 0;
     buttonCondition = 0;
     playCount = 0;
+    naming.hidden=true;
+    naming.keyboardType = UIKeyboardTypeDefault;
+    naming.delegate=self;
 //    btn = [UIButton buttonWithType:UIButtonTypeCustom];
 //    btn.frame = CGRectMake(0, 0, 150, 150);
     [btn setImage:[UIImage imageNamed:@"RecStartButton.png"] forState:UIControlStateNormal];
@@ -121,6 +125,7 @@
         buttonCondition = 2;
         [btn setImage:[UIImage imageNamed:@"PlayButton.png"] forState:UIControlStateNormal];
         [self.view addSubview:btn];
+        naming.hidden=false;
     }else if (buttonCondition == 2){
         
         AVAudioSession *audioSession = [AVAudioSession sharedInstance];
@@ -195,8 +200,80 @@
 -(IBAction)deleteRec:(id)sender{
     buttonCondition = 0;
     [btn setImage:[UIImage imageNamed:@"RecStartButton.png"] forState:UIControlStateNormal];
+    naming.hidden=true;
+    naming.text=[NSString stringWithFormat:@""];
 }
 
+-(IBAction)done:(id)sender{
+//    if (buttonCondition == 2) {
+    
+//    }
+//    naming.returnKeyType = UIReturnKeyDone;
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+//    name = naming.text;
+    name=naming.text;
+    label.text=name;
+    // キーボードを隠す
+//        [self.view endEditing:YES];
+    [textField resignFirstResponder];
+    
+    NSString *homeDir = NSHomeDirectory();
+    NSString *prefilePath2 = [homeDir stringByAppendingPathComponent:@"name"];
+    NSString *filePath2 = [prefilePath2 stringByAppendingFormat:@"%d.txt",dataNumber];
+    // ファイルマネージャを作成
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    // 注意．
+    // ファイルに書き込もうとしたときに該当のファイルが存在しないとエラーになるため
+    // ファイルが存在しない場合は空のファイルを作成する
+    
+    // ファイルが存在しないか?
+    if (![fileManager fileExistsAtPath:filePath2]) { // yes
+        // 空のファイルを作成する
+        BOOL result = [fileManager createFileAtPath:filePath2
+                                           contents:[NSData data] attributes:nil];
+        if (!result) {
+            NSLog(@"ファイルの作成に失敗");
+//            return;
+        }
+    }
+    
+    // ファイルハンドルを作成する
+    NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:filePath2];
+    if (!fileHandle) {
+        NSLog(@"ファイルハンドルの作成に失敗");
+//        return;
+    }
+    
+    // ファイルに書き込むデータ1を作成
+    NSData *nameData1 = [NSData dataWithBytes:name.UTF8String
+                                   length:name.length];
+    // ファイルに書き込む
+    [fileHandle writeData:nameData1];
+    
+    // 効率化のためにすぐにファイルに書き込まれずキャッシュされることがある．
+    // 「synchronizeFile」メソッドを使用することで
+    // キャッシュされた情報を即座に書き込むことが可能．
+    [fileHandle synchronizeFile];
+    
+    // ファイルを閉じる
+    [fileHandle closeFile];
+    
+    NSLog(@"ファイルの書き込みが完了しました．");
+    
+    NSUserDefaults *savedName = [NSUserDefaults standardUserDefaults];
+//    [ud setInteger:100 forKey:@"KEY_I"];  // int型の100をKEY_Iというキーで保存
+    [savedName setObject:name forKey:@"NAME"];
+    [savedName setInteger:dataNumber forKey:@"DATA_NUMBER"];
+    [savedName setBool:true forKey:@"ADD_MODE"];
+    
+
+
+    
+    
+    return YES;
+}
 
 -(IBAction)choseData1:(id)sender{
     dataNumber = 1;

@@ -52,6 +52,9 @@
                                 <state key="normal" title="Button" image="samplerButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="button1" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tUH-Ta-jMz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQu-yb-rdW">
                                 <rect key="frame" x="224" y="132" width="80" height="80"/>
@@ -149,10 +152,70 @@
                                 <color key="textColor" red="0.18000658929999999" green="0.93003402219999998" blue="0.47001719359999999" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i39-5C-0IH">
+                                <rect key="frame" x="25" y="136" width="62" height="64"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="addButtonAction1" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hAd-lD-BEL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqZ-vY-Pft">
+                                <rect key="frame" x="129" y="136" width="62" height="64"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <state key="normal" title="+"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYJ-Qy-Ogh">
+                                <rect key="frame" x="233" y="136" width="62" height="64"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <state key="normal" title="+"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASK-tf-cD9">
+                                <rect key="frame" x="25" y="240" width="62" height="64"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <state key="normal" title="+"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpb-yf-49Q">
+                                <rect key="frame" x="129" y="240" width="62" height="64"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <state key="normal" title="+"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wS-jg-78Q">
+                                <rect key="frame" x="233" y="240" width="62" height="64"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <state key="normal" title="+"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHA-XE-hjL">
+                                <rect key="frame" x="25" y="344" width="62" height="64"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <state key="normal" title="+"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IF2-YK-Vlc">
+                                <rect key="frame" x="129" y="344" width="62" height="64"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <state key="normal" title="+"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ow-KY-9MU">
+                                <rect key="frame" x="233" y="344" width="62" height="64"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <state key="normal" title="+"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.23921570181846619" green="0.20000001788139343" blue="0.21568629145622253" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="addButton1" destination="i39-5C-0IH" id="MZa-S1-hlx"/>
+                        <outlet property="addButton2" destination="sqZ-vY-Pft" id="KmG-br-aQh"/>
+                        <outlet property="addButton3" destination="xYJ-Qy-Ogh" id="NdA-ta-eVR"/>
+                        <outlet property="addButton4" destination="ASK-tf-cD9" id="wTu-sq-5sY"/>
+                        <outlet property="addButton5" destination="Gpb-yf-49Q" id="rg9-52-zhf"/>
+                        <outlet property="addButton6" destination="3wS-jg-78Q" id="mAN-OH-heG"/>
+                        <outlet property="addButton7" destination="AHA-XE-hjL" id="JlR-KT-pDZ"/>
+                        <outlet property="addButton8" destination="IF2-YK-Vlc" id="0ya-08-ZcG"/>
+                        <outlet property="addButton9" destination="1ow-KY-9MU" id="sd5-sK-RYX"/>
+                        <outlet property="label" destination="vEe-aj-gmx" id="ADm-8n-8yA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -194,7 +257,8 @@
                                     <barButtonItem systemItem="flexibleSpace" id="mdu-kt-98I"/>
                                     <barButtonItem systemItem="done" id="0Sf-TL-b21">
                                         <connections>
-                                            <segue destination="9os-bj-0Gp" kind="presentation" id="SrY-ud-Nb4"/>
+                                            <action selector="done:" destination="JEg-hA-hkK" id="4cL-ls-qxR"/>
+                                            <segue destination="vXZ-lx-hvc" kind="presentation" id="FgA-Ub-UkZ"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -204,6 +268,17 @@
                                 <rect key="frame" x="102" y="122" width="117" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a9g-Iv-YFU">
+                                <rect key="frame" x="112" y="84" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhh-ph-hB4">
+                                <rect key="frame" x="32" y="87" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3n-7m-EPO">
@@ -221,11 +296,13 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="btn" destination="V3n-7m-EPO" id="41h-UO-Okz"/>
+                        <outlet property="label" destination="Hhh-ph-hB4" id="iSj-Jg-MJv"/>
+                        <outlet property="naming" destination="a9g-Iv-YFU" id="oVY-kE-MqK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lnD-rY-UeL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-348" y="38"/>
+            <point key="canvasLocation" x="-376" y="136"/>
         </scene>
         <!--Edit View Controller-->
         <scene sceneID="x69-rE-oUo">
@@ -335,7 +412,6 @@
         <image name="samplerButton.png" width="341" height="342"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XeD-rp-efD"/>
-        <segue reference="Zhh-WK-s0V"/>
+        <segue reference="tzz-QS-adH"/>
     </inferredMetricsTieBreakers>
 </document>

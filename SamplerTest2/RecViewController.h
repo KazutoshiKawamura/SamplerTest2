@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface RecViewController : UIViewController <AVAudioRecorderDelegate,AVAudioPlayerDelegate>{
+
+@interface RecViewController : UIViewController <UITextFieldDelegate,AVAudioRecorderDelegate,AVAudioPlayerDelegate>{
     
     AVAudioRecorder *avRecorder;
     AVAudioPlayer *avPlayer[50];
@@ -18,6 +19,8 @@
     int buttonCondition;
     IBOutlet UIButton *btn;
     int playCount;
+    IBOutlet UITextField *naming;
+    NSString *name;
     
 }
 //@property IBOutlet UIButton *btn;
@@ -25,6 +28,8 @@
 //- (IBAction)resStop:(id)sender;
 //- (IBAction)play:(id)sender;
 -(IBAction)deleteRec:(id)sender;
+-(IBAction)done:(id)sender;
+-(BOOL)textFieldShouldReturn:(UITextField *)naming;
 -(IBAction)choseData1:(id)sender;
 -(IBAction)choseData2:(id)sender;
 -(IBAction)choseData3:(id)sender;
