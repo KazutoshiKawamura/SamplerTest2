@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1fi-ev-Dgv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -26,7 +26,7 @@
                                     <navigationItem title="Play" id="Hkq-Jn-nU6">
                                         <barButtonItem key="leftBarButtonItem" title="Rec" id="Vhw-xL-cDw">
                                             <connections>
-                                                <segue destination="JEg-hA-hkK" kind="presentation" id="zs9-wB-Crc"/>
+                                                <action selector="recButton:" destination="vXZ-lx-hvc" id="kdh-co-J9F"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Tvv-8r-2vP">
@@ -42,7 +42,7 @@
                                 <items>
                                     <barButtonItem systemItem="add" id="jQ2-SI-oYy">
                                         <connections>
-                                            <segue destination="1fi-ev-Dgv" kind="presentation" id="4z5-pc-GgF"/>
+                                            <action selector="addButton:" destination="vXZ-lx-hvc" id="Ubn-ZU-QPg"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -222,11 +222,12 @@
                         <outlet property="addButton8" destination="IF2-YK-Vlc" id="0ya-08-ZcG"/>
                         <outlet property="addButton9" destination="1ow-KY-9MU" id="sd5-sK-RYX"/>
                         <outlet property="label" destination="vEe-aj-gmx" id="ADm-8n-8yA"/>
+                        <segue destination="1fi-ev-Dgv" kind="modal" id="mqz-aA-x5r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="39" y="38"/>
+            <point key="canvasLocation" x="-226" y="166"/>
         </scene>
         <!--Rec View Controller-->
         <scene sceneID="X4G-ut-ajv">
@@ -312,10 +313,10 @@
             </objects>
             <point key="canvasLocation" x="-12" y="-691"/>
         </scene>
-        <!--Table Rec View Controller-->
+        <!--File Table View Controller-->
         <scene sceneID="lov-QZ-UgU">
             <objects>
-                <viewController storyboardIdentifier="TableRecViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1fi-ev-Dgv" customClass="TableRecViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FileTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1fi-ev-Dgv" customClass="FileTableViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r4C-vX-egb"/>
                         <viewControllerLayoutGuide type="bottom" id="N9z-4w-rbh"/>
@@ -328,75 +329,39 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <color key="barTintColor" red="0.73251638100000005" green="0.72023957120000004" blue="0.68750141170000001" alpha="1" colorSpace="deviceRGB"/>
                                 <items>
-                                    <navigationItem title="Title" id="jAD-WP-Fij">
-                                        <barButtonItem key="rightBarButtonItem" title="Item" id="lNh-Qx-qYr">
+                                    <navigationItem id="jAD-WP-Fij">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="lNh-Qx-qYr">
                                             <connections>
-                                                <action selector="test:" destination="1fi-ev-Dgv" id="t0c-MZ-o3H"/>
+                                                <action selector="cancelButton:" destination="1fi-ev-Dgv" id="N7W-my-L2o"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69O-Os-gOH">
-                                <rect key="frame" x="139" y="98" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7b-MZ-dkK">
-                                <rect key="frame" x="247" y="105" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="testButton:" destination="1fi-ev-Dgv" eventType="touchUpInside" id="iF4-g9-CE4"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZOu-TI-0gG">
-                                <rect key="frame" x="0.0" y="189" width="320" height="379"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6I-pf-fgt">
+                                <rect key="frame" x="71" y="31" width="179" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.23921570180000001" green="0.20000001789999999" blue="0.21568629149999999" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="label" destination="69O-Os-gOH" id="ggA-z5-NTO"/>
                         <outlet property="tableView" destination="ZOu-TI-0gG" id="HVw-Rm-HdI"/>
+                        <outlet property="titleLabel" destination="F6I-pf-fgt" id="5bu-X0-W94"/>
                         <segue destination="JEg-hA-hkK" kind="modal" identifier="toRecViewController" id="mww-Jp-wZx"/>
+                        <segue destination="9os-bj-0Gp" kind="modal" identifier="toEditViewController" id="iZF-5X-t7m"/>
+                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="toPlayViewController" id="AG9-Bi-pbW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MmQ-sh-gJA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="431" y="-675"/>
-        </scene>
-        <!--Table Rec View Controller-->
-        <scene sceneID="kmO-Ko-vxB">
-            <objects>
-                <tableViewController id="G4f-Zn-DgJ" customClass="TableRecViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="SMX-4K-JdY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="r7J-zD-GkA">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r7J-zD-GkA" id="FkL-QT-z0C">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="G4f-Zn-DgJ" id="oSG-AB-4aL"/>
-                            <outlet property="delegate" destination="G4f-Zn-DgJ" id="61E-T6-1N1"/>
-                        </connections>
-                    </tableView>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xws-5Z-Ai4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="768" y="-691"/>
+            <point key="canvasLocation" x="429" y="-655"/>
         </scene>
         <!--Edit View Controller-->
         <scene sceneID="x69-rE-oUo">
@@ -507,7 +472,7 @@
         <image name="samplerButton.png" width="341" height="342"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tzz-QS-adH"/>
-        <segue reference="mww-Jp-wZx"/>
+        <segue reference="AG9-Bi-pbW"/>
+        <segue reference="iZF-5X-t7m"/>
     </inferredMetricsTieBreakers>
 </document>

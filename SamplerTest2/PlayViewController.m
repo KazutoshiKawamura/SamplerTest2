@@ -44,6 +44,7 @@
         addButton8.hidden=false;
         addButton9.hidden=false;
     }
+//    _situation = 0;
 }
 
 
@@ -89,6 +90,21 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(IBAction)recButton:(id)sender{
+    FileTableViewController *tableVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"FileTableViewController"];
+    tableVC.situation = 1;
+    [self presentViewController:tableVC animated:YES completion:nil];//YESならModal,Noなら何もなし
+//    FileTableViewController.situation = 1;
+//    [self performSegueWithIdentifier:@"toFileTableViewController" sender:self];
+}
+
+-(IBAction)addButton:(id)sender{
+    FileTableViewController *tableVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"FileTableViewController"];
+    tableVC.situation = 0;
+    [self presentViewController:tableVC animated:YES completion:nil];//YESならModal,Noなら何もなし
+//    [self performSegueWithIdentifier:@"toFileTableViewController" sender:self];
+}
 
 -(IBAction)playButtonAction1{
     [self playButtonAction:dataNumberOfButton1];

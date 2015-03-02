@@ -1,20 +1,20 @@
 //
-//  TableRecViewController.m
+//  FileTableViewController.m
 //  SamplerTest2
 //
 //  Created by kztskawamu on 2015/03/02.
 //  Copyright (c) 2015年 kztskawamu. All rights reserved.
 //
 
-#import "TableRecViewController.h"
+#import "FileTableViewController.h"
 
 #define _STCellId @"Cell"
 
-@interface TableRecViewController ()
+@interface FileTableViewController ()
 
 @end
 
-@implementation TableRecViewController
+@implementation FileTableViewController
 
 -(void)awakeFromNib{
     
@@ -36,12 +36,18 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-
-    
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:_STCellId];
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    number = 0;
+    
+    
+    if (_situation == 0) {
+        titleLabel.text = @"Select Add File";
+    }else if (_situation == 1) {
+        titleLabel.text = @"Select Rec File";
+    }else if (_situation == 2) {
+        titleLabel.text = @"Select Edit File";
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,11 +58,13 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 21;
 }
@@ -67,67 +75,30 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%d", indexPath.row]; // 何番目のセルかを表示させました
+    cell.textLabel.text = [NSString stringWithFormat:@"%d.", indexPath.row + 1]; // 何番目のセルかを表示させました
     return cell;
 }
 
-
--(IBAction)test:(id)sender{
-    RecViewController *secondVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"RecViewController"];
-    secondVC.secondNum = self.firstNum;
-    [self presentViewController:secondVC animated:YES completion:nil];//YESならModal,Noなら何もなし
-}
-
-
-
--(IBAction)testButton:(id)sender{
-    
-                number++;
-                label.text=[NSString stringWithFormat:@"%d",number];
+-(IBAction)cancelButton:(id)sender{
+    if (_situation == 0) {
+        [self performSegueWithIdentifier:@"toPlayViewController" sender:self];
+    }else if (_situation == 1) {
+        [self performSegueWithIdentifier:@"toPlayViewController" sender:self];
+    }else if (_situation == 2) {
+        [self performSegueWithIdentifier:@"toEditViewController" sender:self];
+    }
 }
 
 #pragma mark - Table view Delegate
 
-//- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSUInteger row = [indexPath row];
-//    
-//    number++;
-//    label.text=[NSString stringWithFormat:@"%d",number];
-//    if (row == 0){
-//        return nil;
-//    }
-//    return indexPath;
-//}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    number++;
-//    label.text=[NSString stringWithFormat:@"%d",number];
-    
     [self performSegueWithIdentifier:@"toRecViewController" sender:self];
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    [tableView deselectRowAtIndexPath:indexPath animated:YES]; // 選択状態の解除をします。
-//    if(indexPath.section == 0) { // 1個目のセクションです。
-//        if(indexPath.row == 0) {
-//
-//        } else if(indexPath.row == 1) {
-//
-//        } else {
-//
-//        }
-//    } else { // 2個目のセクションです。
-////        myValue = indexPath.row; // 行の値をmyValueに代入しています。
-//    }
-//    label.text=[NSString stringWithFormat:@"%d",number];
-////    NSLog(@"myValue:%d",myValue); // myValueの値をコンソールへ出力します。
-//}
-
-
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:; forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
     // Configure the cell...
     

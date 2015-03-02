@@ -10,7 +10,6 @@
 		C7934AAB1A9DB19C00201915 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7934AAA1A9DB19C00201915 /* main.m */; };
 		C7934AAE1A9DB19C00201915 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7934AAD1A9DB19C00201915 /* AppDelegate.m */; };
 		C7934AB11A9DB19C00201915 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7934AB01A9DB19C00201915 /* ViewController.m */; };
-		C7934AB41A9DB19C00201915 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7934AB21A9DB19C00201915 /* Main.storyboard */; };
 		C7934AB61A9DB19C00201915 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7934AB51A9DB19C00201915 /* Images.xcassets */; };
 		C7934AB91A9DB19C00201915 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7934AB71A9DB19C00201915 /* LaunchScreen.xib */; };
 		C7934AC51A9DB19D00201915 /* SamplerTest2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7934AC41A9DB19D00201915 /* SamplerTest2Tests.m */; };
@@ -28,6 +27,8 @@
 		C7934B0E1AA0540500201915 /* burger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7934B0A1AA0540500201915 /* burger@2x.png */; };
 		C7934B401AA12BD100201915 /* PlayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C7934B3F1AA12BD100201915 /* PlayButton.png */; };
 		C7934B711AA39B5B00201915 /* TableRecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7934B701AA39B5B00201915 /* TableRecViewController.m */; };
+		C7934B741AA47C3500201915 /* FileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7934B731AA47C3500201915 /* FileTableViewController.m */; };
+		C7934B761AA4940100201915 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7934B751AA4940100201915 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +49,6 @@
 		C7934AAD1A9DB19C00201915 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C7934AAF1A9DB19C00201915 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C7934AB01A9DB19C00201915 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C7934AB31A9DB19C00201915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7934AB51A9DB19C00201915 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C7934AB81A9DB19C00201915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C7934ABE1A9DB19D00201915 /* SamplerTest2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SamplerTest2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +74,9 @@
 		C7934B3F1AA12BD100201915 /* PlayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayButton.png; sourceTree = "<group>"; };
 		C7934B6F1AA39B5B00201915 /* TableRecViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableRecViewController.h; sourceTree = "<group>"; };
 		C7934B701AA39B5B00201915 /* TableRecViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableRecViewController.m; sourceTree = "<group>"; };
+		C7934B721AA47C3500201915 /* FileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileTableViewController.h; sourceTree = "<group>"; };
+		C7934B731AA47C3500201915 /* FileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileTableViewController.m; sourceTree = "<group>"; };
+		C7934B751AA4940100201915 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +137,10 @@
 				C7934AD21A9DB22500201915 /* EditViewController.m */,
 				C7934B6F1AA39B5B00201915 /* TableRecViewController.h */,
 				C7934B701AA39B5B00201915 /* TableRecViewController.m */,
+				C7934B721AA47C3500201915 /* FileTableViewController.h */,
+				C7934B731AA47C3500201915 /* FileTableViewController.m */,
+				C7934B751AA4940100201915 /* Main.storyboard */,
 				C7934AB51A9DB19C00201915 /* Images.xcassets */,
-				C7934AB21A9DB19C00201915 /* Main.storyboard */,
 				C7934AB71A9DB19C00201915 /* LaunchScreen.xib */,
 				C7934AA81A9DB19C00201915 /* Supporting Files */,
 			);
@@ -282,9 +287,9 @@
 				C7934AD81A9DB2CF00201915 /* samplerButton.png in Resources */,
 				C7934B0D1AA0540500201915 /* burger.png in Resources */,
 				C7934B401AA12BD100201915 /* PlayButton.png in Resources */,
-				C7934AB41A9DB19C00201915 /* Main.storyboard in Resources */,
 				C7934AB91A9DB19C00201915 /* LaunchScreen.xib in Resources */,
 				C7934AB61A9DB19C00201915 /* Images.xcassets in Resources */,
+				C7934B761AA4940100201915 /* Main.storyboard in Resources */,
 				C7934AE41A9EE2FA00201915 /* RecStopButton.png in Resources */,
 				C7934AE31A9EE2FA00201915 /* RecStartButton.png in Resources */,
 				C7934B0C1AA0540500201915 /* background1.jpg in Resources */,
@@ -312,6 +317,7 @@
 				C7934AAE1A9DB19C00201915 /* AppDelegate.m in Sources */,
 				C7934AD61A9DB23500201915 /* RecViewController.m in Sources */,
 				C7934ADE1A9DB2F200201915 /* BJRangeSliderWithProgress.m in Sources */,
+				C7934B741AA47C3500201915 /* FileTableViewController.m in Sources */,
 				C7934AAB1A9DB19C00201915 /* main.m in Sources */,
 				C7934AD31A9DB22500201915 /* EditViewController.m in Sources */,
 			);
@@ -336,14 +342,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C7934AB21A9DB19C00201915 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C7934AB31A9DB19C00201915 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C7934AB71A9DB19C00201915 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

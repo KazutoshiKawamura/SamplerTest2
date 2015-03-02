@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import "FileTableViewController.h"
 
 
 @interface PlayViewController : UIViewController{
@@ -29,7 +30,10 @@
     NSUserDefaults *savedName;
 
 }
+//@property int situation;
 
+-(IBAction)recButton:(id)sender;
+-(IBAction)addButton:(id)sender;
 -(IBAction)playButtonAction1;
 -(IBAction)playButtonAction2;
 -(IBAction)playButtonAction3;
