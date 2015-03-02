@@ -27,6 +27,7 @@
 		C7934B0D1AA0540500201915 /* burger.png in Resources */ = {isa = PBXBuildFile; fileRef = C7934B091AA0540500201915 /* burger.png */; };
 		C7934B0E1AA0540500201915 /* burger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7934B0A1AA0540500201915 /* burger@2x.png */; };
 		C7934B401AA12BD100201915 /* PlayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C7934B3F1AA12BD100201915 /* PlayButton.png */; };
+		C7934B711AA39B5B00201915 /* TableRecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7934B701AA39B5B00201915 /* TableRecViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		C7934B091AA0540500201915 /* burger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burger.png; sourceTree = "<group>"; };
 		C7934B0A1AA0540500201915 /* burger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "burger@2x.png"; sourceTree = "<group>"; };
 		C7934B3F1AA12BD100201915 /* PlayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayButton.png; sourceTree = "<group>"; };
+		C7934B6F1AA39B5B00201915 /* TableRecViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableRecViewController.h; sourceTree = "<group>"; };
+		C7934B701AA39B5B00201915 /* TableRecViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableRecViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,10 +128,12 @@
 				C7934AB01A9DB19C00201915 /* ViewController.m */,
 				C7934AD41A9DB23500201915 /* RecViewController.h */,
 				C7934AD51A9DB23500201915 /* RecViewController.m */,
-				C7934AD11A9DB22500201915 /* EditViewController.h */,
-				C7934AD21A9DB22500201915 /* EditViewController.m */,
 				C7934ACE1A9DB20900201915 /* PlayViewController.h */,
 				C7934ACF1A9DB20900201915 /* PlayViewController.m */,
+				C7934AD11A9DB22500201915 /* EditViewController.h */,
+				C7934AD21A9DB22500201915 /* EditViewController.m */,
+				C7934B6F1AA39B5B00201915 /* TableRecViewController.h */,
+				C7934B701AA39B5B00201915 /* TableRecViewController.m */,
 				C7934AB51A9DB19C00201915 /* Images.xcassets */,
 				C7934AB21A9DB19C00201915 /* Main.storyboard */,
 				C7934AB71A9DB19C00201915 /* LaunchScreen.xib */,
@@ -300,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7934B711AA39B5B00201915 /* TableRecViewController.m in Sources */,
 				C7934B0B1AA0540500201915 /* CDRTranslucentSideBar.m in Sources */,
 				C7934AD01A9DB20900201915 /* PlayViewController.m in Sources */,
 				C7934AB11A9DB19C00201915 /* ViewController.m in Sources */,

@@ -24,12 +24,9 @@
     self.sideBar = [[CDRTranslucentSideBar alloc] init];
     self.sideBar.sideBarWidth = 200;
     self.sideBar.delegate = self;
-    self.sideBar.translucentStyle = UIBarStyleBlack;
+//    self.sideBar.translucentStyle = UIBarStyleBlack;
     self.sideBar.tag = 0;
     
-    // Add PanGesture to Show SideBar by PanGesture
-    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
-    [self.view addGestureRecognizer:panGestureRecognizer];
     
     // Create Content of SideBar
     UITableView *tableView = [[UITableView alloc] init];
@@ -53,7 +50,7 @@
 }
 
 
-- (IBAction)OnRightSideBarButtonTapped:(id)sender{
+- (IBAction)OnSideBarButtonTapped:(id)sender{
     	[self.sideBar show];
 }
 
@@ -67,30 +64,6 @@
 }
 */
 //------------------------------------------
-#pragma mark - Gesture Handler
-- (void)handlePanGesture:(UIPanGestureRecognizer *)recognizer {
-    // if you have left and right sidebar, you can control the pan gesture by start point.
-    if (recognizer.state == UIGestureRecognizerStateBegan) {
-        CGPoint startPoint = [recognizer locationInView:self.view];
-        
-        // Left SideBar
-        if (startPoint.x < self.view.bounds.size.width / 2.0) {
-            self.sideBar.isCurrentPanGestureTarget = YES;
-        }
-        // Right SideBar
-//        else {
-//            self.rightSideBar.isCurrentPanGestureTarget = YES;
-//        }
-    }
-    
-    [self.sideBar handlePanGestureToShow:recognizer inView:self.view];
-//    [self.rightSideBar handlePanGestureToShow:recognizer inViewController:self];
-    
-    // if you have only one sidebar, do like following
-    
-    // self.sideBar.isCurrentPanGestureTarget = YES;
-    //[self.sideBar handlePanGestureToShow:recognizer inView:self.view];
-}
 
 #pragma mark - CDRTranslucentSideBarDelegate
 - (void)sideBar:(CDRTranslucentSideBar *)sideBar didAppear:(BOOL)animated {
@@ -144,7 +117,7 @@
         return 1;
     }
     else if (section == 1) {
-        return 3;
+        return 20;
     }
     return 0;
 }
@@ -156,10 +129,10 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (section == 0) {
         // StatuBar Height
-        return 20;
+        return 0;
     }
     else if (section == 1) {
-        return 44;
+        return 64;
     }
     return 0;
 }
@@ -171,13 +144,15 @@
         return clearView;
     }
     else if (section == 1) {
-        UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 44)];
-        headerView.backgroundColor = [UIColor clearColor];
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, tableView.bounds.size.width - 15, 44)];
-        UIView *separatorLineView = [[UIView alloc] initWithFrame:CGRectMake(15, 44, tableView.bounds.size.width, 0.5f)];
+        UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 44
+                                                                      )];
+        headerView.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.7];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, tableView.bounds.size.width - 15, 80)];
+        UIView *separatorLineView = [[UIView alloc] initWithFrame:CGRectMake(15, 0, tableView.bounds.size.width, 0.5f)];
         separatorLineView.backgroundColor = [UIColor blackColor];
         [headerView addSubview:separatorLineView];
-        label.text = @"Chidori";
+        label.text = @"Choose Edit File";
+        label.textColor = [UIColor whiteColor];
         [headerView addSubview:label];
         return headerView;
     }
@@ -213,6 +188,57 @@
         }
         else if (indexPath.row == 2) {
             cell.textLabel.text = @"Menu 3";
+        }
+        else if (indexPath.row == 3) {
+            cell.textLabel.text = @"Menu 4";
+        }
+        else if (indexPath.row == 4) {
+            cell.textLabel.text = @"Menu 5";
+        }
+        else if (indexPath.row == 5) {
+            cell.textLabel.text = @"Menu 6";
+        }
+        else if (indexPath.row == 6) {
+            cell.textLabel.text = @"Menu 7";
+        }
+        else if (indexPath.row == 7) {
+            cell.textLabel.text = @"Menu 8";
+        }
+        else if (indexPath.row == 8) {
+            cell.textLabel.text = @"Menu 9";
+        }
+        else if (indexPath.row == 9) {
+            cell.textLabel.text = @"Menu 10";
+        }
+        else if (indexPath.row == 10) {
+            cell.textLabel.text = @"Menu 11";
+        }
+        else if (indexPath.row == 11) {
+            cell.textLabel.text = @"Menu 12";
+        }
+        else if (indexPath.row == 12) {
+            cell.textLabel.text = @"Menu 13";
+        }
+        else if (indexPath.row == 13) {
+            cell.textLabel.text = @"Menu 14";
+        }
+        else if (indexPath.row == 14) {
+            cell.textLabel.text = @"Menu 15";
+        }
+        else if (indexPath.row == 15) {
+            cell.textLabel.text = @"Menu 16";
+        }
+        else if (indexPath.row == 16) {
+            cell.textLabel.text = @"Menu 17";
+        }
+        else if (indexPath.row == 17) {
+            cell.textLabel.text = @"Menu 18";
+        }
+        else if (indexPath.row == 18) {
+            cell.textLabel.text = @"Menu 19";
+        }
+        else if (indexPath.row == 19) {
+            cell.textLabel.text = @"Menu 20";
         }
     }
     

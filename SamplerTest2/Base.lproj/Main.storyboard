@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1fi-ev-Dgv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -7,20 +7,23 @@
         <!--Play View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="PlayViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="PlayViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="44" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="whZ-3f-RHW">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <color key="barTintColor" red="0.73251638100000005" green="0.72023957120000004" blue="0.68750141170000001" alpha="1" colorSpace="deviceRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
                                 <items>
-                                    <navigationItem title="Title" id="Hkq-Jn-nU6">
+                                    <navigationItem title="Play" id="Hkq-Jn-nU6">
                                         <barButtonItem key="leftBarButtonItem" title="Rec" id="Vhw-xL-cDw">
                                             <connections>
                                                 <segue destination="JEg-hA-hkK" kind="presentation" id="zs9-wB-Crc"/>
@@ -37,7 +40,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sPs-7O-FXN">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
-                                    <barButtonItem image="burger.png" id="jQ2-SI-oYy"/>
+                                    <barButtonItem systemItem="add" id="jQ2-SI-oYy">
+                                        <connections>
+                                            <segue destination="1fi-ev-Dgv" kind="presentation" id="4z5-pc-GgF"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                                 <color key="barTintColor" red="0.73251638100000005" green="0.72023957120000004" blue="0.68750141170000001" alpha="1" colorSpace="deviceRGB"/>
                             </toolbar>
@@ -224,7 +231,7 @@
         <!--Rec View Controller-->
         <scene sceneID="X4G-ut-ajv">
             <objects>
-                <viewController id="JEg-hA-hkK" customClass="RecViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JEg-hA-hkK" customClass="RecViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sEo-sb-HIS"/>
                         <viewControllerLayoutGuide type="bottom" id="oYj-Xj-1Ll"/>
@@ -237,7 +244,7 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <color key="barTintColor" red="0.73251638100000005" green="0.72023957120000004" blue="0.68750141170000001" alpha="1" colorSpace="deviceRGB"/>
                                 <items>
-                                    <navigationItem title="Title" id="jjT-NX-Vsj">
+                                    <navigationItem title="Rec" id="jjT-NX-Vsj">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="7fK-8u-J7Z">
                                             <connections>
                                                 <segue destination="vXZ-lx-hvc" kind="presentation" id="tzz-QS-adH"/>
@@ -293,6 +300,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.23921570180000001" green="0.20000001789999999" blue="0.21568629149999999" alpha="1" colorSpace="deviceRGB"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="btn" destination="V3n-7m-EPO" id="41h-UO-Okz"/>
@@ -302,12 +310,98 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lnD-rY-UeL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-376" y="136"/>
+            <point key="canvasLocation" x="-12" y="-691"/>
+        </scene>
+        <!--Table Rec View Controller-->
+        <scene sceneID="lov-QZ-UgU">
+            <objects>
+                <viewController storyboardIdentifier="TableRecViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1fi-ev-Dgv" customClass="TableRecViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r4C-vX-egb"/>
+                        <viewControllerLayoutGuide type="bottom" id="N9z-4w-rbh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ggo-DV-SP2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FqZ-f1-BvD">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="barTintColor" red="0.73251638100000005" green="0.72023957120000004" blue="0.68750141170000001" alpha="1" colorSpace="deviceRGB"/>
+                                <items>
+                                    <navigationItem title="Title" id="jAD-WP-Fij">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="lNh-Qx-qYr">
+                                            <connections>
+                                                <action selector="test:" destination="1fi-ev-Dgv" id="t0c-MZ-o3H"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69O-Os-gOH">
+                                <rect key="frame" x="139" y="98" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7b-MZ-dkK">
+                                <rect key="frame" x="247" y="105" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="testButton:" destination="1fi-ev-Dgv" eventType="touchUpInside" id="iF4-g9-CE4"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZOu-TI-0gG">
+                                <rect key="frame" x="0.0" y="189" width="320" height="379"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23921570180000001" green="0.20000001789999999" blue="0.21568629149999999" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="label" destination="69O-Os-gOH" id="ggA-z5-NTO"/>
+                        <outlet property="tableView" destination="ZOu-TI-0gG" id="HVw-Rm-HdI"/>
+                        <segue destination="JEg-hA-hkK" kind="modal" identifier="toRecViewController" id="mww-Jp-wZx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MmQ-sh-gJA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="431" y="-675"/>
+        </scene>
+        <!--Table Rec View Controller-->
+        <scene sceneID="kmO-Ko-vxB">
+            <objects>
+                <tableViewController id="G4f-Zn-DgJ" customClass="TableRecViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="SMX-4K-JdY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="r7J-zD-GkA">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r7J-zD-GkA" id="FkL-QT-z0C">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="G4f-Zn-DgJ" id="oSG-AB-4aL"/>
+                            <outlet property="delegate" destination="G4f-Zn-DgJ" id="61E-T6-1N1"/>
+                        </connections>
+                    </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xws-5Z-Ai4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768" y="-691"/>
         </scene>
         <!--Edit View Controller-->
         <scene sceneID="x69-rE-oUo">
             <objects>
-                <viewController id="9os-bj-0Gp" customClass="EditViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9os-bj-0Gp" customClass="EditViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ct1-Lx-Sq1"/>
                         <viewControllerLayoutGuide type="bottom" id="3Ls-DM-gXp"/>
@@ -370,10 +464,10 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <color key="barTintColor" red="0.73251638100000005" green="0.72023957120000004" blue="0.68750141170000001" alpha="1" colorSpace="deviceRGB"/>
                                 <items>
-                                    <navigationItem title="Title" id="jJl-19-e9h">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" id="LnB-Me-xx0">
+                                    <navigationItem title="Edit" id="jJl-19-e9h">
+                                        <barButtonItem key="leftBarButtonItem" image="burger.png" id="LnB-Me-xx0">
                                             <connections>
-                                                <action selector="OnRightSideBarButtonTapped:" destination="9os-bj-0Gp" id="jYb-2u-JDO"/>
+                                                <action selector="OnSideBarButtonTapped:" destination="9os-bj-0Gp" id="Z5Y-0L-hjs"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -400,6 +494,7 @@
                         <color key="backgroundColor" red="0.23921570180000001" green="0.20000001789999999" blue="0.21568629149999999" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="xUY-1Y-NAP"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3R-MP-Tuj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -413,5 +508,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tzz-QS-adH"/>
+        <segue reference="mww-Jp-wZx"/>
     </inferredMetricsTieBreakers>
 </document>

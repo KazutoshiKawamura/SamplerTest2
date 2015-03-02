@@ -22,7 +22,9 @@
     IBOutlet UITextField *naming;
     NSString *name;
     
+    
 }
+@property int secondNum;
 //@property IBOutlet UIButton *btn;
 - (IBAction)recStartAndStop:(id)sender;
 //- (IBAction)resStop:(id)sender;

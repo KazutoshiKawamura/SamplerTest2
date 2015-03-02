@@ -12,7 +12,8 @@
     
 }
 
+@property int secondNum;
 
-- (IBAction)OnRightSideBarButtonTapped:(id)sender;
+- (IBAction)OnSideBarButtonTapped:(id)sender;
 
 @end
