@@ -432,7 +432,7 @@
                                     <navigationItem title="Edit" id="jJl-19-e9h">
                                         <barButtonItem key="leftBarButtonItem" image="burger.png" id="LnB-Me-xx0">
                                             <connections>
-                                                <action selector="OnSideBarButtonTapped:" destination="9os-bj-0Gp" id="Z5Y-0L-hjs"/>
+                                                <action selector="SelectFile" destination="9os-bj-0Gp" id="I1W-3h-fFD"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -472,7 +472,7 @@
         <image name="samplerButton.png" width="341" height="342"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AG9-Bi-pbW"/>
+        <segue reference="Zhh-WK-s0V"/>
         <segue reference="iZF-5X-t7m"/>
     </inferredMetricsTieBreakers>
 </document>

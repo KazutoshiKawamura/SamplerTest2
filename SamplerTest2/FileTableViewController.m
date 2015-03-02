@@ -93,7 +93,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:@"toRecViewController" sender:self];
+    if (_situation == 0) {
+        [self performSegueWithIdentifier:@"toPlayViewController" sender:self];
+    }else if (_situation == 1) {
+        [self performSegueWithIdentifier:@"toRecViewController" sender:self];
+    }else if (_situation == 2) {
+        [self performSegueWithIdentifier:@"toEditViewController" sender:self];
+    }
 }
 
 /*

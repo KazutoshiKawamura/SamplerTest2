@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FileTableViewController.h"
 
 @interface EditViewController : UIViewController{
     
@@ -14,6 +15,6 @@
 
 @property int secondNum;
 
-- (IBAction)OnSideBarButtonTapped:(id)sender;
+-(IBAction)SelectFile;
 
 @end
