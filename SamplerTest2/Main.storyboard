@@ -45,8 +45,6 @@
                                             <action selector="add" destination="vXZ-lx-hvc" id="GdG-e9-mJn"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem systemItem="flexibleSpace" id="ScK-7Q-VpG"/>
-                                    <barButtonItem systemItem="cancel" id="SMI-p0-eJ3"/>
                                 </items>
                                 <color key="barTintColor" red="0.73251638100000005" green="0.72023957120000004" blue="0.68750141170000001" alpha="1" colorSpace="deviceRGB"/>
                             </toolbar>
@@ -223,7 +221,15 @@
                         <outlet property="addButton7" destination="AHA-XE-hjL" id="JlR-KT-pDZ"/>
                         <outlet property="addButton8" destination="IF2-YK-Vlc" id="0ya-08-ZcG"/>
                         <outlet property="addButton9" destination="1ow-KY-9MU" id="sd5-sK-RYX"/>
-                        <outlet property="label" destination="vEe-aj-gmx" id="ADm-8n-8yA"/>
+                        <outlet property="label0" destination="vEe-aj-gmx" id="mHF-RP-EZS"/>
+                        <outlet property="label1" destination="cwv-Q8-REf" id="dkZ-Mf-vpB"/>
+                        <outlet property="label2" destination="VHf-Wj-5fp" id="dwt-pN-fCo"/>
+                        <outlet property="label3" destination="c9u-T2-Ngv" id="6ga-KE-tS4"/>
+                        <outlet property="label4" destination="ncc-ie-EAs" id="Xy9-6J-9VP"/>
+                        <outlet property="label5" destination="DJr-39-4Lf" id="cSK-Ru-HAa"/>
+                        <outlet property="label6" destination="Uew-a8-EbJ" id="qu1-v6-Dng"/>
+                        <outlet property="label7" destination="wxn-6k-tGR" id="uAs-Ni-sut"/>
+                        <outlet property="label8" destination="XaZ-zI-rIh" id="goh-ac-I4n"/>
                         <segue destination="1fi-ev-Dgv" kind="modal" id="mqz-aA-x5r"/>
                     </connections>
                 </viewController>
@@ -359,6 +365,7 @@
                         <segue destination="JEg-hA-hkK" kind="modal" identifier="toRecViewController" id="mww-Jp-wZx"/>
                         <segue destination="9os-bj-0Gp" kind="modal" identifier="toEditViewController" id="iZF-5X-t7m"/>
                         <segue destination="vXZ-lx-hvc" kind="modal" identifier="toPlayViewController" id="AG9-Bi-pbW"/>
+                        <segue destination="2YI-vC-Tjk" kind="modal" id="O7E-we-ShR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MmQ-sh-gJA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -466,12 +473,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3R-MP-Tuj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="437" y="38"/>
+            <point key="canvasLocation" x="253" y="85"/>
         </scene>
-        <!--Table Rec View Controller-->
+        <!--Add View Controller-->
         <scene sceneID="nee-YS-oep">
             <objects>
-                <viewController id="2YI-vC-Tjk" customClass="TableRecViewController" sceneMemberID="viewController">
+                <viewController id="2YI-vC-Tjk" customClass="AddViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="evn-GN-B5x"/>
                         <viewControllerLayoutGuide type="bottom" id="fmE-Jo-1fa"/>
@@ -675,11 +682,12 @@
                         <outlet property="addButton8" destination="WfE-kb-830" id="q4e-ZN-b73"/>
                         <outlet property="addButton9" destination="Mx3-fH-hKX" id="7mJ-gc-QDy"/>
                         <outlet property="label" destination="ogP-gK-fea" id="t2B-tQ-FXh"/>
+                        <segue destination="vXZ-lx-hvc" kind="modal" id="Zob-49-FlS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZJ-1s-qD8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="745"/>
+            <point key="canvasLocation" x="712" y="85"/>
         </scene>
     </scenes>
     <resources>
@@ -687,7 +695,7 @@
         <image name="samplerButton.png" width="341" height="342"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FgA-Ub-UkZ"/>
+        <segue reference="Zob-49-FlS"/>
         <segue reference="XeD-rp-efD"/>
     </inferredMetricsTieBreakers>
 </document>

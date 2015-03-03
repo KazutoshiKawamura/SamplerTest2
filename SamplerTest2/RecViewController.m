@@ -76,8 +76,7 @@
                                                                  NSUserDomainMask,YES);
         NSString *documentDir = [filePaths objectAtIndex:0];
         
-        NSString *prePath = [documentDir stringByAppendingPathComponent:@"rec"];
-        NSString *path = [prePath stringByAppendingFormat:@"%d.caf",dataNumber];
+        NSString *path = [documentDir stringByAppendingPathComponent:[NSString stringWithFormat:@"rec%d.caf",dataNumber]];
         
         NSURL *recordingURL = [NSURL fileURLWithPath:path];
         
@@ -137,8 +136,7 @@
                                                                  NSUserDomainMask,YES);
         NSString *documentDir = [filePaths objectAtIndex:0];
         
-        NSString *prePath = [documentDir stringByAppendingPathComponent:@"rec"];
-        NSString *path = [prePath stringByAppendingFormat:@"%d.caf",dataNumber];
+        NSString *path = [documentDir stringByAppendingPathComponent:[NSString stringWithFormat:@"rec%d.caf",dataNumber]];
         
         NSURL *recordingURL = [NSURL fileURLWithPath:path];
         
@@ -219,8 +217,7 @@
     [textField resignFirstResponder];
     
     NSString *homeDir = NSHomeDirectory();
-    NSString *prefilePath2 = [homeDir stringByAppendingPathComponent:@"name"];
-    NSString *filePath2 = [prefilePath2 stringByAppendingFormat:@"%d.txt",dataNumber];
+    NSString *filePath2 = [homeDir stringByAppendingPathComponent:[NSString stringWithFormat:@"name%d.txt",dataNumber]];
     // ファイルマネージャを作成
     NSFileManager *fileManager = [NSFileManager defaultManager];
     

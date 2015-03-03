@@ -19,24 +19,21 @@
     // Do any additional setup after loading the view.
     savedName = [NSUserDefaults standardUserDefaults];
     NSString *name1 = [savedName stringForKey:@"NAME"];
-    label.text=name1;
+    label0.text=name1;
     dataNumber = [savedName integerForKey:@"DATA_NUMBER"];
     dataNumberOfButton1 = 0;
     playCount = 0;
-    addButton1.hidden=true;
-    addButton2.hidden=true;
-    addButton3.hidden=true;
-    addButton4.hidden=true;
-    addButton5.hidden=true;
-    addButton6.hidden=true;
-    addButton7.hidden=true;
-    addButton8.hidden=true;
-    addButton9.hidden=true;
-    recButton.hidden=false;
-    addModeButton.hidden=false;
-    editButton.hidden=false;
-    addCancelButton.hidden=true;
     
+    label0.text = [savedName stringForKey:[NSString stringWithFormat:@"NAME%d",fileNumberOfButton[0]]];
+    label1.text = [savedName stringForKey:[NSString stringWithFormat:@"NAME%d",fileNumberOfButton[1]]];
+    label2.text = [savedName stringForKey:[NSString stringWithFormat:@"NAME%d",fileNumberOfButton[2]]];
+    label3.text = [savedName stringForKey:[NSString stringWithFormat:@"NAME%d",fileNumberOfButton[3]]];
+    label4.text = [savedName stringForKey:[NSString stringWithFormat:@"NAME%d",fileNumberOfButton[4]]];
+    label5.text = [savedName stringForKey:[NSString stringWithFormat:@"NAME%d",fileNumberOfButton[5]]];
+    label6.text = [savedName stringForKey:[NSString stringWithFormat:@"NAME%d",fileNumberOfButton[6]]];
+    label7.text = [savedName stringForKey:[NSString stringWithFormat:@"NAME%d",fileNumberOfButton[7]]];
+    label8.text = [savedName stringForKey:[NSString stringWithFormat:@"NAME%d",fileNumberOfButton[8]]];
+
     addMode = [savedName boolForKey:@"ADD_MODE"];
     if (addMode == true) {
         addButton1.hidden=false;
@@ -68,8 +65,7 @@
                                                              NSUserDomainMask,YES);
     NSString *documentDir = [filePaths objectAtIndex:0];
     
-    NSString *prePath = [documentDir stringByAppendingPathComponent:@"rec"];
-    NSString *path = [prePath stringByAppendingFormat:@"%d.caf",dataNumber];
+    NSString *path = [documentDir stringByAppendingPathComponent:[NSString stringWithFormat:@"rec%d.caf",dataNumber]];
     
     NSURL *recordingURL = [NSURL fileURLWithPath:path];
     
@@ -215,8 +211,7 @@
                                                              NSUserDomainMask,YES);
     NSString *documentDir = [filePaths objectAtIndex:0];
     
-    NSString *prePath = [documentDir stringByAppendingPathComponent:@"rec"];
-    NSString *path = [prePath stringByAppendingFormat:@"%d.caf",data];
+    NSString *path = [documentDir stringByAppendingPathComponent:[NSString stringWithFormat:@"rec%d.caf",dataNumber]];
     
     NSURL *recordingURL = [NSURL fileURLWithPath:path];
     

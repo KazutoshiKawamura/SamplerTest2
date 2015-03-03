@@ -12,8 +12,19 @@
 
 
 @interface PlayViewController : UIViewController{
-    IBOutlet UILabel *label;
     AVAudioPlayer *avPlayer[50];
+    int selectedFileNumber;
+//    NSString *labelName[9];
+    IBOutlet UILabel *label0;
+    IBOutlet UILabel *label1;
+    IBOutlet UILabel *label2;
+    IBOutlet UILabel *label3;
+    IBOutlet UILabel *label4;
+    IBOutlet UILabel *label5;
+    IBOutlet UILabel *label6;
+    IBOutlet UILabel *label7;
+    IBOutlet UILabel *label8;
+    int fileNumberOfButton[9];
     int dataNumber;
     int playCount;
     bool addMode;

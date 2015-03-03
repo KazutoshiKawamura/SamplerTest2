@@ -29,6 +29,7 @@
 		C7934B711AA39B5B00201915 /* TableRecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7934B701AA39B5B00201915 /* TableRecViewController.m */; };
 		C7934B741AA47C3500201915 /* FileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7934B731AA47C3500201915 /* FileTableViewController.m */; };
 		C7934B761AA4940100201915 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7934B751AA4940100201915 /* Main.storyboard */; };
+		C7934B791AA5597F00201915 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7934B781AA5597F00201915 /* AddViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		C7934B721AA47C3500201915 /* FileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileTableViewController.h; sourceTree = "<group>"; };
 		C7934B731AA47C3500201915 /* FileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileTableViewController.m; sourceTree = "<group>"; };
 		C7934B751AA4940100201915 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C7934B771AA5597F00201915 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		C7934B781AA5597F00201915 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				C7934AD51A9DB23500201915 /* RecViewController.m */,
 				C7934ACE1A9DB20900201915 /* PlayViewController.h */,
 				C7934ACF1A9DB20900201915 /* PlayViewController.m */,
+				C7934B771AA5597F00201915 /* AddViewController.h */,
+				C7934B781AA5597F00201915 /* AddViewController.m */,
 				C7934AD11A9DB22500201915 /* EditViewController.h */,
 				C7934AD21A9DB22500201915 /* EditViewController.m */,
 				C7934B6F1AA39B5B00201915 /* TableRecViewController.h */,
@@ -312,6 +317,7 @@
 			files = (
 				C7934B711AA39B5B00201915 /* TableRecViewController.m in Sources */,
 				C7934B0B1AA0540500201915 /* CDRTranslucentSideBar.m in Sources */,
+				C7934B791AA5597F00201915 /* AddViewController.m in Sources */,
 				C7934AD01A9DB20900201915 /* PlayViewController.m in Sources */,
 				C7934AB11A9DB19C00201915 /* ViewController.m in Sources */,
 				C7934AAE1A9DB19C00201915 /* AppDelegate.m in Sources */,
