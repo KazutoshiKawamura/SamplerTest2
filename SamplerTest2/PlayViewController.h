@@ -26,14 +26,19 @@
     IBOutlet UIButton *addButton7;
     IBOutlet UIButton *addButton8;
     IBOutlet UIButton *addButton9;
+    IBOutlet UIButton *recButton;
+    IBOutlet UIButton *addModeButton;
+    IBOutlet UIButton *editButton;
+    IBOutlet UIButton *addCancelButton;
     int dataNumberOfButton1;
     NSUserDefaults *savedName;
 
 }
 //@property int situation;
 
--(IBAction)recButton:(id)sender;
--(IBAction)addButton:(id)sender;
+-(IBAction)rec;
+-(IBAction)add;
+-(IBAction)addCancel;
 -(IBAction)playButtonAction1;
 -(IBAction)playButtonAction2;
 -(IBAction)playButtonAction3;

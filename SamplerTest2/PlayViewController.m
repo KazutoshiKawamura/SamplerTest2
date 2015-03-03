@@ -32,6 +32,11 @@
     addButton7.hidden=true;
     addButton8.hidden=true;
     addButton9.hidden=true;
+    recButton.hidden=false;
+    addModeButton.hidden=false;
+    editButton.hidden=false;
+    addCancelButton.hidden=true;
+    
     addMode = [savedName boolForKey:@"ADD_MODE"];
     if (addMode == true) {
         addButton1.hidden=false;
@@ -43,6 +48,10 @@
         addButton7.hidden=false;
         addButton8.hidden=false;
         addButton9.hidden=false;
+        recButton.hidden=true;
+        addModeButton.hidden=true;
+        editButton.hidden=true;
+        addCancelButton.hidden=false;
     }
 //    _situation = 0;
 }
@@ -91,7 +100,7 @@
 }
 */
 
--(IBAction)recButton:(id)sender{
+-(IBAction)rec{
     FileTableViewController *tableVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"FileTableViewController"];
     tableVC.situation = 1;
     [self presentViewController:tableVC animated:YES completion:nil];//YESならModal,Noなら何もなし
@@ -99,11 +108,27 @@
 //    [self performSegueWithIdentifier:@"toFileTableViewController" sender:self];
 }
 
--(IBAction)addButton:(id)sender{
+-(IBAction)add{
     FileTableViewController *tableVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"FileTableViewController"];
     tableVC.situation = 0;
     [self presentViewController:tableVC animated:YES completion:nil];//YESならModal,Noなら何もなし
 //    [self performSegueWithIdentifier:@"toFileTableViewController" sender:self];
+}
+
+-(IBAction)addCancel{
+    addButton1.hidden=true;
+    addButton2.hidden=true;
+    addButton3.hidden=true;
+    addButton4.hidden=true;
+    addButton5.hidden=true;
+    addButton6.hidden=true;
+    addButton7.hidden=true;
+    addButton8.hidden=true;
+    addButton9.hidden=true;
+    recButton.hidden=false;
+    addModeButton.hidden=false;
+    editButton.hidden=false;
+    addCancelButton.hidden=true;
 }
 
 -(IBAction)playButtonAction1{
